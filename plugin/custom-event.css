@@ -1,0 +1,11 @@
+/* set player size */
+.video-js {
+  width: 640px;
+  height: 360px;
+}
+/* set size and position of rewind button */
+#backButton img{
+  margin-top: -11px;
+  height: 50px;
+  width: 50px;
+}

@@ -1,36 +1,4 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Brightcove Player Sample: Trigger Rewind with a Custom Event</title>
-  <style>
-    .video-js {
-      width: 640px;
-      height: 360px;
-    }
-    #backButton img{
-      margin-top: -11px;
-      height: 50px;
-      width: 50px;
-    }
-  </style>
-</head>
-
-<body>
-  <video id="myPlayerID"
-	  data-video-id="4454629913001"
-		data-account="1752604059001"
-		data-player="default"
-		data-embed="default"
-		data-application-id
-		class="video-js"
-		controls></video>
-	<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
-
-  <script id="pageScript" type="text/javascript">
-  videojs("myPlayerID").ready(function() {
-    // Create variables and new div, anchor and image for download icon
+videojs.registerPlugin('customEvent', function() {
     var myPlayer = this,
         videoName,
         rewindAmount = 5,
@@ -71,8 +39,4 @@
 
       myPlayer.currentTime(newTime);
     });
-  });
-  </script>
-
-</body>
-</html>
+});
