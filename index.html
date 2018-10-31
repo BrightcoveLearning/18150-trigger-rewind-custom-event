@@ -19,18 +19,18 @@
 </head>
 
 <body>
-  <video id="myPlayerID"
+  <video-js id="myPlayerID"
 	  data-video-id="4454629913001"
 		data-account="1752604059001"
 		data-player="default"
 		data-embed="default"
 		data-application-id
 		class="video-js"
-		controls></video>
-	<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+		controls></video-js>
+	<script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
 
   <script id="pageScript" type="text/javascript">
-  videojs("myPlayerID").ready(function() {
+  videojs.getPlayer('myPlayerID').ready(function() {
     // Create variables and new div, anchor and image for download icon
     var myPlayer = this,
         videoName,
@@ -43,7 +43,7 @@
     newElement.id = 'backButton';
 
     // Assign properties to elements and assign to parents
-    newImage.setAttribute('src','http://solutions.brightcove.com/bcls/brightcove-player/custom-event/back-button.png');
+    newImage.setAttribute('src','https://solutions.brightcove.com/bcls/brightcove-player/custom-event/back-button.png');
     newElement.appendChild(newImage);
 
     // Get the spacer element
