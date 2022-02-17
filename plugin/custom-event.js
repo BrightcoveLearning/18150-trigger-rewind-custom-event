@@ -10,7 +10,7 @@ videojs.registerPlugin('customEvent', function() {
     newElement.id = 'backButton';
 
     // Assign properties to elements and assign to parents
-    newImage.setAttribute('src','http://solutions.brightcove.com/bcls/brightcove-player/custom-event/back-button.png');
+    newImage.setAttribute('src','https://solutions.brightcove.com/bcls/brightcove-player/custom-event/back-button.png');
     newElement.appendChild(newImage);
 
     // Get the spacer element
